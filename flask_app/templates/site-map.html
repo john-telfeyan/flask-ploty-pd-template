@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+    {% for link in link_list %}
+    
+    <a href="{{link.url}}" >{{ link.route }}</a> <br>
+    
+    {% endfor %}
+    </div>
+{% endblock %}

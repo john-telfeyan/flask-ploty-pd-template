@@ -1,0 +1,15 @@
+<html>
+<link rel="stylesheet" media="screen" href = "{{ url_for('static', filename='bootstrap.min.css') }}">
+    <head>
+        {% if title %}
+        <title>{{ title }} </title>
+        {% else %}
+        <title>Welcome </title>
+        {% endif %}
+    </head>
+    <body>
+        <div>{{ title }}: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
